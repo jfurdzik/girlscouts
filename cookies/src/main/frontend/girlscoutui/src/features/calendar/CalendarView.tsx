@@ -1,6 +1,7 @@
 // src/features/calendar/CalendarView.tsx
 import React, { useState } from 'react';
-import { GirlScoutEvent } from '../../types';
+import type { GirlScoutEvent } from '../../types/';
+
 
 interface CalendarViewProps {
   events: GirlScoutEvent[];

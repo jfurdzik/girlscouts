@@ -1,6 +1,6 @@
 // src/features/events/EventDetail.tsx
 import React, { useState } from 'react';
-import { GirlScoutEvent } from '../../types';
+import type { GirlScoutEvent } from '../../types';
 
 interface EventDetailProps {
   event: GirlScoutEvent;
