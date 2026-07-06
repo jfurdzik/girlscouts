@@ -55,18 +55,48 @@ import { Calendar } from "@demark-pro/react-booking-calendar";
 import "@demark-pro/react-booking-calendar/dist/react-booking-calendar.css";
 
 export function BookingCalendar() {
-    const [selected, setSelected] = useState([null, null]);
+    const [selectedDate, setSelectedDate] = useState([null, null]);
+    const [selectedTime, setSelectedTime] = ([null, null]);
+
+    const mockAvailability = {
+            "2026-07-10": ["09:00", "09:30", "10:00"],
+            "2026-07-11": ["13:00", "13:30", "14:00"],
+    };
+
+    const dateString = selectedDate ? selectedDate.toISOString().split("T")[0] : "";
+    const slots = selectedDate == null ? [] : mockAvailability[dateString] ?? [];
+
+    console.log("selectedDate:", selectedDate);
+    console.log("dateString:", dateString);
+    console.log("slots:", slots);
 
     return (
+        <>
         <Calendar
-            selected={selected}
+            selected={selectedDate}
             reserved={[
                 {
                     startDate: new Date(2030, 4, 12, 14, 0),
                     endDate: new Date(2030, 4, 14, 10, 0),
                 },
             ]}
-            onChange={setSelected}
+                onChange={
+                    (value) => {
+                        console.log("Calendar value:", value);
+                        console.log("Type:", typeof value);
+
+                        setSelectedDate(value);
+                    }
+}
         />
+
+        {
+            selectedTime && (
+                <div>
+                    Date: {dateString}
+          
+                </div>)
+            }
+        </>
     );
 }
