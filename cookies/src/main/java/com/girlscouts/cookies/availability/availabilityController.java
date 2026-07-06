@@ -44,7 +44,7 @@ public class AvailabilityController {
     public List<String> getAvailability(
             @RequestParam LocalDate date) {
 
-        return eventRepository.findByDate(date)
+        return eventRepository.findByEventDate(date) //
                 .stream()
                 .map(event ->
                         event.getStartTime().toString())
@@ -60,15 +60,15 @@ public class AvailabilityController {
     public EventDetailsDTO getEventInfo(
             @PathVariable Long id) {
 
-        Event event = eventRepository.findById(id)
+        Event event = eventRepository.findBySchoolId(id) //
                 .orElseThrow(() ->
                         new RuntimeException("Event not found"));
 
         List<Assignment> assignments =
-                assignmentRepository.findByEventId(id);
+                assignmentRepository.findByEventId(id);  //good
 
         List<Report> reports =
-                reportRepository.findByEventId(id);
+                reportRepository.findByEventId(id); //good
 
         int totalLeadCards = reports.stream()
                 .mapToInt(Report::getLeadCardsDistributed)

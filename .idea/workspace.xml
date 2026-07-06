@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3bf655dd-c76e-4283-a5cb-00e85ca1e0d1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/cookies/src/main/java/com/girlscouts/cookies/schools/SchoolType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cookies/src/main/java/com/girlscouts/cookies/reports/reportRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/cookies/src/main/java/com/girlscouts/cookies/reports/ReportRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cookies/src/main/java/com/girlscouts/cookies/reports/reports.java" beforeDir="false" afterPath="$PROJECT_DIR$/cookies/src/main/java/com/girlscouts/cookies/reports/Reports.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cookies/src/main/java/com/girlscouts/cookies/reports/reportsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cookies/src/main/java/com/girlscouts/cookies/reports/ReportsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cookies/src/main/java/com/girlscouts/cookies/reports/reportsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/cookies/src/main/java/com/girlscouts/cookies/reports/ReportsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookies/src/main/java/com/girlscouts/cookies/availability/availabilityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cookies/src/main/java/com/girlscouts/cookies/availability/availabilityController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
