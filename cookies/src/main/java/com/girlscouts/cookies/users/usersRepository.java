@@ -1,4 +1,4 @@
-package girlscouts.cookies.users;
+package com.girlscouts.cookies.users;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

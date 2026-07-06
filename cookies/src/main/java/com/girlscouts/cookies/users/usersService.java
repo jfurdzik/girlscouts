@@ -1,4 +1,4 @@
-package com.girlscouts.cookies;
+package com.girlscouts.cookies.users;
 
 import org.springframework.stereotype.Service;
 import java.util.List;
