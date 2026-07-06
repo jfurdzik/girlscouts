@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8a4391a5-0cbe-440b-ae93-d6f6e923563a" name="Changes" comment="" />
+    <list default="true" id="3bf655dd-c76e-4283-a5cb-00e85ca1e0d1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/cookies/src/main/java/com/girlscouts/cookies/reports/reports.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cookies/src/main/java/com/girlscouts/cookies/reports/reportsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookies/src/main/java/com/girlscouts/cookies/assignments/assignments.java" beforeDir="false" afterPath="$PROJECT_DIR$/cookies/src/main/java/com/girlscouts/cookies/assignments/Assignments.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookies/src/main/java/com/girlscouts/cookies/assignments/assignmentsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cookies/src/main/java/com/girlscouts/cookies/assignments/AssignmentsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookies/src/main/java/com/girlscouts/cookies/assignments/assignmentsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/cookies/src/main/java/com/girlscouts/cookies/assignments/AssignmentsRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookies/src/main/java/com/girlscouts/cookies/assignments/assignmentsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/cookies/src/main/java/com/girlscouts/cookies/assignments/AssignmentsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookies/src/main/java/com/girlscouts/cookies/reports/reportRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/cookies/src/main/java/com/girlscouts/cookies/reports/reportRepository.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,33 +19,33 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8,
-  "fromUser": false
-}]]></component>
-  <component name="ProjectId" id="3G8cLm6l6mWdaZAI7zJ9rffV9AZ" />
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0,
+  &quot;fromUser&quot;: false
+}</component>
+  <component name="ProjectId" id="3G8dEWrFKRU2IEA0h9ZeX14dFLy" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/TDEV03M/Workspace/girlscouts"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;backend/dev&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="8a4391a5-0cbe-440b-ae93-d6f6e923563a" name="Changes" comment="" />
-      <created>1783356582730</created>
+      <changelist id="3bf655dd-c76e-4283-a5cb-00e85ca1e0d1" name="Changes" comment="" />
+      <created>1783357020160</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1783356582730</updated>
+      <updated>1783357020160</updated>
     </task>
     <servers />
   </component>
