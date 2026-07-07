@@ -49,12 +49,12 @@ public class SchoolController {
         return schoolService.getSchoolsByZipCode(zipCode);
     }
 
-    @GetMapping("/service-unit/{serviceUnit}")
-    public List<School> getSchoolsByServiceUnit(
-            @PathVariable String serviceUnit) {
-
-        return schoolService.getSchoolsByServiceUnit(serviceUnit);
-    }
+//    @GetMapping("/service-unit/{serviceUnit}")
+//    public List<School> getSchoolsByServiceUnit(
+//            @PathVariable String serviceUnit) {
+//
+//        return schoolService.getSchoolsByServiceUnit(serviceUnit);
+//    }
 
     @GetMapping("/type/{type}")
     public List<School> getSchoolsByType(

@@ -1,14 +1,122 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="3bf655dd-c76e-4283-a5cb-00e85ca1e0d1" name="Changes" comment="" />
+    <list default="true" id="3bf655dd-c76e-4283-a5cb-00e85ca1e0d1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookies/src/main/java/com/girlscouts/cookies/assignments/Assignments.java" beforeDir="false" afterPath="$PROJECT_DIR$/cookies/src/main/java/com/girlscouts/cookies/assignments/Assignment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookies/src/main/java/com/girlscouts/cookies/assignments/AssignmentsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cookies/src/main/java/com/girlscouts/cookies/assignments/AssignmentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookies/src/main/java/com/girlscouts/cookies/assignments/AssignmentsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/cookies/src/main/java/com/girlscouts/cookies/assignments/AssignmentRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookies/src/main/java/com/girlscouts/cookies/assignments/AssignmentsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/cookies/src/main/java/com/girlscouts/cookies/assignments/AssignmentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookies/src/main/java/com/girlscouts/cookies/availability/availabilityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cookies/src/main/java/com/girlscouts/cookies/availability/AvailabilityController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookies/src/main/java/com/girlscouts/cookies/availability/eventDetailsDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/cookies/src/main/java/com/girlscouts/cookies/availability/EventDetailsDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookies/src/main/java/com/girlscouts/cookies/events/events.java" beforeDir="false" afterPath="$PROJECT_DIR$/cookies/src/main/java/com/girlscouts/cookies/events/Event.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookies/src/main/java/com/girlscouts/cookies/events/eventsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cookies/src/main/java/com/girlscouts/cookies/events/EventController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookies/src/main/java/com/girlscouts/cookies/events/eventsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/cookies/src/main/java/com/girlscouts/cookies/events/EventRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookies/src/main/java/com/girlscouts/cookies/events/eventsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/cookies/src/main/java/com/girlscouts/cookies/events/EventService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookies/src/main/java/com/girlscouts/cookies/reports/ReportRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/cookies/src/main/java/com/girlscouts/cookies/reports/ReportRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookies/src/main/java/com/girlscouts/cookies/reports/Reports.java" beforeDir="false" afterPath="$PROJECT_DIR$/cookies/src/main/java/com/girlscouts/cookies/reports/Reports.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookies/src/main/java/com/girlscouts/cookies/reports/ReportsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/cookies/src/main/java/com/girlscouts/cookies/reports/ReportsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookies/src/main/java/com/girlscouts/cookies/schools/schools.java" beforeDir="false" afterPath="$PROJECT_DIR$/cookies/src/main/java/com/girlscouts/cookies/schools/School.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookies/src/main/java/com/girlscouts/cookies/schools/schoolsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cookies/src/main/java/com/girlscouts/cookies/schools/SchoolController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookies/src/main/java/com/girlscouts/cookies/schools/schoolsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/cookies/src/main/java/com/girlscouts/cookies/schools/SchoolRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookies/src/main/java/com/girlscouts/cookies/schools/schoolsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/cookies/src/main/java/com/girlscouts/cookies/schools/SchoolService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookies/src/main/java/com/girlscouts/cookies/users/role.java" beforeDir="false" afterPath="$PROJECT_DIR$/cookies/src/main/java/com/girlscouts/cookies/users/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookies/src/main/java/com/girlscouts/cookies/users/users.java" beforeDir="false" afterPath="$PROJECT_DIR$/cookies/src/main/java/com/girlscouts/cookies/users/Users.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookies/src/main/java/com/girlscouts/cookies/users/usersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cookies/src/main/java/com/girlscouts/cookies/users/UsersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookies/src/main/java/com/girlscouts/cookies/users/usersRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/cookies/src/main/java/com/girlscouts/cookies/users/UsersRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookies/src/main/java/com/girlscouts/cookies/users/usersService.java" beforeDir="false" afterPath="$PROJECT_DIR$/cookies/src/main/java/com/girlscouts/cookies/users/UsersService.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="66" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.4772414184877751" />
+      <entry key="MS500" value="2.968465587983017" />
+      <entry key="S2" value="7.882852675074075" />
+      <entry key="S5" value="14.325039196937658" />
+      <entry key="S10" value="19.717084302049265" />
+      <entry key="S30" value="25.759026334779776" />
+      <entry key="S60" value="27.75360297512901" />
+      <entry key="M2" value="28.843127086563122" />
+      <entry key="M5" value="29.52892063254745" />
+      <entry key="M10" value="29.79229877284286" />
+      <entry key="M15" value="30.085443103984275" />
+      <entry key="M30" value="31.954079828266238" />
+      <entry key="H1" value="35.83814843749251" />
+      <entry key="H2" value="39.97564267319408" />
+      <entry key="H4" value="43.025323613159706" />
+      <entry key="D1" value="46.26230673704296" />
+      <entry key="W1" value="46.892609238527506" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="0.0" />
+      <entry key="S5" value="1.9244E-320" />
+      <entry key="S10" value="1.3872186330203472E-160" />
+      <entry key="S30" value="5.176644061200936E-54" />
+      <entry key="S60" value="2.2752239584711087E-27" />
+      <entry key="M2" value="4.769930773576391E-14" />
+      <entry key="M5" value="4.692505933605427E-6" />
+      <entry key="M10" value="0.0021662192718202434" />
+      <entry key="M15" value="0.01674177920926191" />
+      <entry key="M30" value="0.12939002747222017" />
+      <entry key="H1" value="0.35970825327231515" />
+      <entry key="H2" value="0.5997568284499266" />
+      <entry key="H4" value="0.7744396867735582" />
+      <entry key="D1" value="0.9582921563270934" />
+      <entry key="W1" value="0.9939323994537295" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="1.4164228348942236" />
+      <entry key="MS500" value="2.930618645372022" />
+      <entry key="S2" value="7.86300993695252" />
+      <entry key="S5" value="14.311247246071648" />
+      <entry key="S10" value="19.707520340768106" />
+      <entry key="S30" value="25.75481156294657" />
+      <entry key="S60" value="27.751324314845125" />
+      <entry key="M2" value="28.8419408546382" />
+      <entry key="M5" value="29.528438974221935" />
+      <entry key="M10" value="29.794211912407313" />
+      <entry key="M15" value="30.10198051769956" />
+      <entry key="M30" value="32.083232231871044" />
+      <entry key="H1" value="36.197600067582385" />
+      <entry key="H2" value="40.57519951673151" />
+      <entry key="H4" value="43.79963725450484" />
+      <entry key="D1" value="47.22057331842312" />
+      <entry key="W1" value="47.88653785797073" />
+    </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0,
@@ -19,17 +127,41 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;backend/dev&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.CookiesApplication.executor": "Run",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "backend/dev",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-37e91769500f-intellij.indexing.shared.core-IU-261.26222.65" />
+        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-IU-261.26222.65" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="3bf655dd-c76e-4283-a5cb-00e85ca1e0d1" name="Changes" comment="" />
@@ -37,6 +169,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1783357020160</updated>
+      <workItem from="1783421839767" duration="1692000" />
     </task>
     <servers />
   </component>

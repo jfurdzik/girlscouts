@@ -4,7 +4,7 @@ import com.girlscouts.cookies.assignments.Assignment;
 import com.girlscouts.cookies.assignments.AssignmentRepository;
 import com.girlscouts.cookies.events.Event;
 import com.girlscouts.cookies.events.EventRepository;
-import com.girlscouts.cookies.reports.Report;
+import com.girlscouts.cookies.reports.Reports;
 import com.girlscouts.cookies.reports.ReportRepository;
 import org.springframework.web.bind.annotation.*;
 
@@ -44,7 +44,7 @@ public class AvailabilityController {
     public List<String> getAvailability(
             @RequestParam LocalDate date) {
 
-        return eventRepository.findByDate(date)
+        return eventRepository.findByEventDate(date) //
                 .stream()
                 .map(event ->
                         event.getStartTime().toString())
@@ -60,24 +60,25 @@ public class AvailabilityController {
     public EventDetailsDTO getEventInfo(
             @PathVariable Long id) {
 
-        Event event = eventRepository.findById(id)
-                .orElseThrow(() ->
-                        new RuntimeException("Event not found"));
+//        Event event = eventRepository.findBySchoolId(id) //
+//                .orElseThrow(() ->
+//                        new RuntimeException("Event not found"));
 
         List<Assignment> assignments =
-                assignmentRepository.findByEventId(id);
+                assignmentRepository.findByEventId(id);  //good
 
-        List<Report> reports =
-                reportRepository.findByEventId(id);
+        List<Reports> reports =
+                reportRepository.findByEventId(id); //good
 
-        int totalLeadCards = reports.stream()
-                .mapToInt(Report::getLeadCardsDistributed)
-                .sum();
+//        int totalLeadCards = reports.stream()
+//                .mapToInt(Reports::getLeadCardsDistributed)
+//                .sum();
 
-        return new EventDetailsDTO(
-                event,
-                assignments,
-                totalLeadCards
-        );
+//        return new EventDetailsDTO(
+//                event,
+//                assignments,
+//                totalLeadCards
+//        );
+        return null;
     }
 }
