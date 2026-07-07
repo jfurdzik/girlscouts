@@ -23,9 +23,6 @@ export default function ContactPage() {
 
     const [loading, setLoading] = useState(false);
     const [submitted, setSubmitted] = useState(false);
-    const [volunteer, setVolunteer] = useState<VolunteerContact | null>(null);
-
-    const [loadingVolunteer, setLoadingVolunteer] = useState(true);
 
     function update<K extends keyof typeof form>(field: K, value: string) {
         setForm(prev => ({
@@ -33,35 +30,14 @@ export default function ContactPage() {
             [field]: value,
         }));
     }
-    useEffect(() => {
 
-        async function loadVolunteer() {
-
-            if (!volunteerId) {
-                setLoadingVolunteer(false);
-                return;
-            }
-
-            const data = await getVolunteer(volunteerId);
-
-            setVolunteer(data);
-
-            setLoadingVolunteer(false);
-        }
-
-        loadVolunteer();
-
-    }, [volunteerId]);
 
     async function handleSubmit(e: React.FormEvent) {
         e.preventDefault();
 
         setLoading(true);
 
-        const result = await submitLead({
-            volunteerId,
-            ...form,
-        });
+        const result = await submitLead(form);
 
         setLoading(false);
 
@@ -72,26 +48,6 @@ export default function ContactPage() {
         }
     }
 
-    if (loadingVolunteer) {
-        return (
-            <main className="min-h-screen flex items-center justify-center">
-                Loading...
-            </main>
-        );
-    }
-
-    if (!volunteer) {
-        return (
-            <main className="min-h-screen flex items-center justify-center p-4">
-                <Card className="max-w-md w-full text-center">
-                    <PageHeader
-                        title="Volunteer Not Found"
-                        subtitle="This QR code appears to be invalid. Please contact the booth volunteer for a new QR code."
-                    />
-                </Card>
-            </main>
-        );
-    }
 
     if (submitted) {
         return (
@@ -122,11 +78,7 @@ export default function ContactPage() {
 
                     <PageHeader
                         title="Interested in Girl Scouts?"
-                        subtitle={
-                            volunteer
-                                ? `${volunteer.name} from ${volunteer.school} would love to connect with your family. Fill out the form below and they'll reach out soon!`
-                                : "Fill out this quick form and we'll contact you."
-                        }
+                        subtitle="Fill out this quick form and we'll help you find a troop that's right for your family."
                     />
 
                     <form

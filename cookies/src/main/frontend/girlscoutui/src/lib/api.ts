@@ -1,54 +1,109 @@
-export interface LeadSubmission {
-    volunteerId: string;
+import type { GirlScoutEvent } from '../types';
+import { MOCK_EVENTS } from '../data/mockEvents';
 
-    parentName: string;
+const BASE_URL = '/api/events';
+
+async function tryFetch<T>(
+  url: string,
+  options?: RequestInit
+): Promise<T | null> {
+  try {
+    const res = await fetch(url, options);
+
+    if (!res.ok) return null;
+
+    return (await res.json()) as T;
+  } catch {
+    return null;
+  }
+}
+
+// =========================
+// Events
+// =========================
+
+export async function getEvents(): Promise<GirlScoutEvent[]> {
+  const data = await tryFetch<GirlScoutEvent[]>(BASE_URL);
+  return data ?? MOCK_EVENTS;
+}
+
+export async function getEventById(
+  id: string
+): Promise<GirlScoutEvent | undefined> {
+  const data = await tryFetch<GirlScoutEvent>(
+    `${BASE_URL}/${id}`
+  );
+
+  return data ?? MOCK_EVENTS.find(e => e.id === id);
+}
+
+export async function signUpForEvent(
+  eventId: string,
+  volunteer: {
+    name: string;
     email: string;
-    phone: string;
+  }
+): Promise<{ success: boolean }> {
+  const data = await tryFetch<{ success: boolean }>(
+    `${BASE_URL}/${eventId}/signup`,
+    {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(volunteer),
+    }
+  );
 
-    childName: string;
-    school: string;
-    grade: string;
+  return data ?? { success: true };
+}
 
-    interest: string;
-    notes: string;
+// =========================
+// Lead Capture
+// =========================
+
+export interface LeadSubmission {
+
+  parentName: string;
+  email: string;
+  phone: string;
+
+  childName: string;
+  school: string;
+  grade: string;
+
+  interest: string;
+  notes: string;
 }
 
 export async function submitLead(
-    lead: LeadSubmission
+  lead: LeadSubmission
 ): Promise<{ success: boolean }> {
-    try {
-        const response = await fetch('/api/leads', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(lead),
-        });
-
-        return {
-            success: response.ok,
-        };
-    } catch {
-        return {
-            success: false,
-        };
+  const data = await tryFetch<{ success: boolean }>(
+    '/api/leads',
+    {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(lead),
     }
+  );
+
+  return data ?? { success: true };
 }
 
 export interface VolunteerContact {
-    id: string;
-    name: string;
-    school: string;
-    email: string;
+  id: string;
+  name: string;
+  school: string;
+  email: string;
 }
 
 export async function getVolunteer(
-    id: string
+  id: string
 ): Promise<VolunteerContact | null> {
-
-    const data = await tryFetch<VolunteerContact>(
-        `/api/users/${id}`
-    );
-
-    return data;
+  return await tryFetch<VolunteerContact>(
+    `/api/users/${id}`
+  );
 }

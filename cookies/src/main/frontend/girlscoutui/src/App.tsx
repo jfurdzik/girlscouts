@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { Layout } from './components/Layout';
 import PageHeader from './components/PageHeader';
 import Card from './components/Card';
+import QRCodeCard from './components/QRCodeCard';
 import { CalendarView } from './features/calendar/CalendarView';
 import { EventDetail } from './features/events/EventDetail';
 import { getEvents } from './lib/api';
@@ -56,11 +57,9 @@ function App() {
       {/* VIEW 2: QR LEAD CARD FEATURE (Placeholder) */}
       {currentView === 'leads' && (
         <div>
-          <PageHeader title="QR Lead Card" subtitle="Capture new-family leads on the spot" />
+          <PageHeader title="Lead Card Form" />
           <div className="px-4">
-            <Card className="text-center py-10">
-              <p className="text-gray-500 text-sm">Scan helper or direct inputs will display here.</p>
-            </Card>
+            <QRCodeCard></QRCodeCard>
           </div>
         </div>
       )}
