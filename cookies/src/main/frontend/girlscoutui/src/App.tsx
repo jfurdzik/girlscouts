@@ -2,7 +2,6 @@
 import { useEffect, useState } from 'react';
 import { Layout } from './components/Layout';
 import PageHeader from './components/PageHeader';
-import Card from './components/Card';
 import QRCodeCard from './components/QRCodeCard';
 import { CalendarView } from './features/calendar/CalendarView';
 import { EventDetail } from './features/events/EventDetail';
@@ -68,13 +67,6 @@ function App() {
       {/* VIEW 3: MANAGER DASHBOARD (Placeholder) */}
       {currentView === 'manager' && (
         <div>
-          {/* <PageHeader title="Manager Control Panel" subtitle="Manage schools, volunteers, and notifications" />
-          <div className="px-4">
-            <Card className="text-center py-10">
-              <p className="text-gray-500 text-sm">Input screens for schools, volunteers, and notifications will display here.</p>
-            </Card>
-          </div> */}
-
           <ManagerDash></ManagerDash>
         </div>
       )}

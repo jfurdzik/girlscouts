@@ -1,5 +1,6 @@
 import type {
   GirlScoutEvent,
+  Contact,
   BackendEvent,
   BackendAssignment,
   BackendLeadCard,
@@ -53,10 +54,11 @@ function formatTime(time: string | null): string {
   return `${displayHour}:${m} ${suffix}`;
 }
 
-/** Maps the raw backend Event + its assignment count into the UI-friendly
- *  GirlScoutEvent shape the calendar/detail components already expect. */
-function mapEvent(event: BackendEvent, volunteerCount: number): GirlScoutEvent {
-  const total = event.capacity ?? undefined;
+/** Maps the raw backend Event + the volunteers assigned to it into the
+ *  UI-friendly GirlScoutEvent shape the calendar/detail components expect.
+ *  There's no capacity/slot count in this app — attendee count is just shown
+ *  as-is, uncapped. */
+function mapEvent(event: BackendEvent, attendees: Contact[]): GirlScoutEvent {
   return {
     id: String(event.eventId),
     title: event.eventName,
@@ -67,11 +69,36 @@ function mapEvent(event: BackendEvent, volunteerCount: number): GirlScoutEvent {
     serviceUnit: '',
     description: event.description ?? '',
     contacts: [],
-    attendees: [],
-    slotsAvailable: total !== undefined ? Math.max(total - volunteerCount, 0) : 0,
-    slotsTotal: total,
+    attendees,
     status: event.status.toLowerCase() as GirlScoutEvent['status'],
   };
+}
+
+function buildAttendeesByEvent(
+  assignments: BackendAssignment[],
+  users: BackendUser[]
+): Map<number, Contact[]> {
+  const usersById = new Map(users.map(u => [u.id, u]));
+  const map = new Map<number, Contact[]>();
+
+  for (const a of assignments) {
+    if (a.eventId == null || a.userId == null) continue;
+    if (a.status?.toUpperCase() === 'CANCELLED') continue;
+
+    const user = usersById.get(a.userId);
+    const contact: Contact = {
+      id: String(a.userId),
+      name: user ? `${user.firstName} ${user.lastName}`.trim() : `Volunteer #${a.userId}`,
+      role: 'Volunteer',
+      email: user?.email ?? '',
+    };
+
+    const list = map.get(a.eventId) ?? [];
+    list.push(contact);
+    map.set(a.eventId, list);
+  }
+
+  return map;
 }
 
 // =========================
@@ -79,36 +106,31 @@ function mapEvent(event: BackendEvent, volunteerCount: number): GirlScoutEvent {
 // =========================
 
 export async function getEvents(): Promise<GirlScoutEvent[]> {
-  const [events, assignments] = await Promise.all([
+  const [events, assignments, users] = await Promise.all([
     tryFetch<BackendEvent[]>(BASE_URL),
     tryFetch<BackendAssignment[]>('/api/assignments'),
+    tryFetch<BackendUser[]>('/api/users'),
   ]);
 
   if (!events) return MOCK_EVENTS;
 
-  const countByEvent = new Map<number, number>();
-  for (const a of assignments ?? []) {
-    if (a.eventId == null) continue;
-    if (a.status?.toUpperCase() === 'CANCELLED') continue;
-    countByEvent.set(a.eventId, (countByEvent.get(a.eventId) ?? 0) + 1);
-  }
+  const attendeesByEvent = buildAttendeesByEvent(assignments ?? [], users ?? []);
 
-  return events.map(e => mapEvent(e, countByEvent.get(e.eventId) ?? 0));
+  return events.map(e => mapEvent(e, attendeesByEvent.get(e.eventId) ?? []));
 }
 
 export async function getEventById(id: string): Promise<GirlScoutEvent | undefined> {
-  const [event, assignments] = await Promise.all([
+  const [event, assignments, users] = await Promise.all([
     tryFetch<BackendEvent>(`${BASE_URL}/${id}`),
     tryFetch<BackendAssignment[]>(`/api/assignments`),
+    tryFetch<BackendUser[]>('/api/users'),
   ]);
 
   if (!event) return MOCK_EVENTS.find(e => e.id === id);
 
-  const count = (assignments ?? []).filter(
-    a => String(a.eventId) === id && a.status?.toUpperCase() !== 'CANCELLED'
-  ).length;
+  const attendeesByEvent = buildAttendeesByEvent(assignments ?? [], users ?? []);
 
-  return mapEvent(event, count);
+  return mapEvent(event, attendeesByEvent.get(event.eventId) ?? []);
 }
 
 export async function signUpForEvent(
