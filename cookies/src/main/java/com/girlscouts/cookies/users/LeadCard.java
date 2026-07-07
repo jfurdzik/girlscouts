@@ -10,6 +10,7 @@ public class LeadCard {
     private Long id;
 
     private String childName;
+    private String parentName;
     private String email;
     private String contact;
 
@@ -19,8 +20,9 @@ public class LeadCard {
 
     public LeadCard() {}
 
-    public LeadCard(String childName, String email, String contact, Users user) {
+    public LeadCard(String childName, String parentName, String email, String contact, Users user) {
         this.childName = childName;
+        this.parentName = parentName;
         this.email = email;
         this.contact = contact;
         this.user = user;
