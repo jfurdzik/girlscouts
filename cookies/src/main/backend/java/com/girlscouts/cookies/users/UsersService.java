@@ -1,4 +1,4 @@
-package com.girlscouts.cookies;
+package com.girlscouts.cookies.users;
 
 import org.springframework.stereotype.Service;
 import java.util.List;
@@ -28,7 +28,6 @@ public class UsersService {
     public Users updateUser(Long id, Users updatedUser) {
 
         Users user = getUserById(id);
-
         user.setFirstName(updatedUser.getFirstName());
         user.setLastName(updatedUser.getLastName());
         user.setRole(updatedUser.getRole());
