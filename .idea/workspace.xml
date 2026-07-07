@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8a4391a5-0cbe-440b-ae93-d6f6e923563a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/cookies/src/main/frontend/girlscoutui/src/features/manager/EventEditor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cookies/src/main/frontend/girlscoutui/src/components/Layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/cookies/src/main/frontend/girlscoutui/src/components/Layout.tsx" afterDir="false" />
-    </list>
+    <list default="true" id="8a4391a5-0cbe-440b-ae93-d6f6e923563a" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,6 +25,69 @@
     &quot;accountId&quot;: &quot;85608529-b5f7-471a-8dec-16f6bcc2cfec&quot;
   }
 }</component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.0004625260060345" />
+      <entry key="MS500" value="1.6222881956985038" />
+      <entry key="S2" value="4.295377819762297" />
+      <entry key="S5" value="7.16995245043887" />
+      <entry key="S10" value="11.55690165169478" />
+      <entry key="S30" value="20.87140913927093" />
+      <entry key="S60" value="25.517839910595924" />
+      <entry key="M2" value="28.513053265330317" />
+      <entry key="M5" value="34.01063643377182" />
+      <entry key="M10" value="48.49421359652844" />
+      <entry key="M15" value="60.986992601035276" />
+      <entry key="M30" value="82.3148608111578" />
+      <entry key="H1" value="98.17070076758421" />
+      <entry key="H2" value="107.8739442721281" />
+      <entry key="H4" value="113.24645468165708" />
+      <entry key="D1" value="118.01346455499248" />
+      <entry key="W1" value="118.85837463238857" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="1.7794975886655477E-63" />
+      <entry key="MS500" value="2.8187689621040257E-13" />
+      <entry key="S2" value="7.286431227412294E-4" />
+      <entry key="S5" value="0.0555911870961186" />
+      <entry key="S10" value="0.23577783419167841" />
+      <entry key="S30" value="0.6177806832644013" />
+      <entry key="S60" value="0.7859908392753556" />
+      <entry key="M2" value="0.8882663366880545" />
+      <entry key="M5" value="1.158103127779301" />
+      <entry key="M10" value="1.988897307827158" />
+      <entry key="M15" value="2.708472559890791" />
+      <entry key="M30" value="3.928315808609383" />
+      <entry key="H1" value="4.827642095062848" />
+      <entry key="H2" value="5.37500655227832" />
+      <entry key="H4" value="5.677143515028413" />
+      <entry key="D1" value="5.944692413133855" />
+      <entry key="W1" value="5.992061427035192" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="0.030842526428902332" />
+      <entry key="MS500" value="1.1154837070401458" />
+      <entry key="S2" value="4.130292236194573" />
+      <entry key="S5" value="7.121903313147924" />
+      <entry key="S10" value="11.659504538601668" />
+      <entry key="S30" value="21.363384671921157" />
+      <entry key="S60" value="26.219006776531536" />
+      <entry key="M2" value="29.351825899573328" />
+      <entry key="M5" value="35.14631674076656" />
+      <entry key="M10" value="50.47021173704549" />
+      <entry key="M15" value="63.68600019478556" />
+      <entry key="M30" value="86.23773467924485" />
+      <entry key="H1" value="102.99536449019553" />
+      <entry key="H2" value="113.24738377277335" />
+      <entry key="H4" value="118.92279323589474" />
+      <entry key="D1" value="123.95801964906138" />
+      <entry key="W1" value="124.85041636257547" />
+    </decayedShown>
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8,
   &quot;fromUser&quot;: false
@@ -38,20 +97,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/molly/personal Projects/girlscout_final/girlscouts&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "Spring Boot.CookiesApplication.executor": "Run",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/molly/personal Projects/girlscout_final/girlscouts"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
