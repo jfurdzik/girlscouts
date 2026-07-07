@@ -28,18 +28,18 @@ public class LeadCard {
         this.user = user;
     }
 
-    // getters and setters
-    public Long getId() { return id; }
-
-    public String getChildName() { return childName; }
-    public void setChildName(String childName) { this.childName = childName; }
-
-    public String getEmail() { return email; }
-    public void setEmail(String email) { this.email = email; }
-
-    public String getContact() { return contact; }
-    public void setContact(String contact) { this.contact = contact; }
-
-    public Users getUser() { return user; }
-    public void setUser(Users user) { this.user = user; }
+//    // getters and setters
+//    public Long getId() { return id; }
+//
+//    public String getChildName() { return childName; }
+//    public void setChildName(String childName) { this.childName = childName; }
+//
+//    public String getEmail() { return email; }
+//    public void setEmail(String email) { this.email = email; }
+//
+//    public String getContact() { return contact; }
+//    public void setContact(String contact) { this.contact = contact; }
+//
+//    public Users getUser() { return user; }
+//    public void setUser(Users user) { this.user = user; }
 }
