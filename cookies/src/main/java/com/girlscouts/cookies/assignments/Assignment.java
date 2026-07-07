@@ -10,7 +10,6 @@ import lombok.Setter;
 @Table(name = "assignments")
 public class Assignment {
 
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long assignmentId;

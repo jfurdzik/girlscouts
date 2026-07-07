@@ -5,14 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3bf655dd-c76e-4283-a5cb-00e85ca1e0d1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/cookies/src/main/java/com/girlscouts/cookies/exceptions/EntityNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cookies/src/main/java/com/girlscouts/cookies/users/LeadCard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cookies/src/main/java/com/girlscouts/cookies/availability/AvailabilityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cookies/src/main/java/com/girlscouts/cookies/availability/AvailabilityController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cookies/src/main/java/com/girlscouts/cookies/events/EventRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/cookies/src/main/java/com/girlscouts/cookies/events/EventRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cookies/src/main/java/com/girlscouts/cookies/reports/Reports.java" beforeDir="false" afterPath="$PROJECT_DIR$/cookies/src/main/java/com/girlscouts/cookies/reports/Reports.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cookies/src/main/java/com/girlscouts/cookies/schools/SchoolService.java" beforeDir="false" afterPath="$PROJECT_DIR$/cookies/src/main/java/com/girlscouts/cookies/schools/SchoolService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookies/src/main/java/com/girlscouts/cookies/assignments/Assignment.java" beforeDir="false" afterPath="$PROJECT_DIR$/cookies/src/main/java/com/girlscouts/cookies/assignments/Assignment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookies/src/main/java/com/girlscouts/cookies/assignments/AssignmentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/cookies/src/main/java/com/girlscouts/cookies/assignments/AssignmentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookies/src/main/java/com/girlscouts/cookies/schools/School.java" beforeDir="false" afterPath="$PROJECT_DIR$/cookies/src/main/java/com/girlscouts/cookies/schools/School.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cookies/src/main/java/com/girlscouts/cookies/users/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/cookies/src/main/java/com/girlscouts/cookies/users/Users.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookies/src/main/java/com/girlscouts/cookies/users/UsersService.java" beforeDir="false" afterPath="$PROJECT_DIR$/cookies/src/main/java/com/girlscouts/cookies/users/UsersService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,60 +49,60 @@
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
       <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0000000000283868" />
-      <entry key="S2" value="1.0024275268756473" />
-      <entry key="S5" value="1.1313874687622527" />
-      <entry key="S10" value="1.7771959106879873" />
-      <entry key="S30" value="5.4680871189153875" />
-      <entry key="S60" value="9.230822296680557" />
-      <entry key="M2" value="13.092790197825597" />
-      <entry key="M5" value="17.397765533948515" />
-      <entry key="M10" value="21.873528905006584" />
-      <entry key="M15" value="28.49413070592953" />
-      <entry key="M30" value="50.28463669995568" />
-      <entry key="H1" value="78.61810760955323" />
-      <entry key="H2" value="103.43368341105746" />
-      <entry key="H4" value="120.47696215458276" />
-      <entry key="D1" value="138.04072340897466" />
-      <entry key="W1" value="141.42432837029776" />
+      <entry key="MS500" value="1.0000000000010958" />
+      <entry key="S2" value="1.0015506059299515" />
+      <entry key="S5" value="1.1169521052081781" />
+      <entry key="S10" value="1.56555252606943" />
+      <entry key="S30" value="3.0347659320237854" />
+      <entry key="S60" value="5.102294625200514" />
+      <entry key="M2" value="13.430985576067876" />
+      <entry key="M5" value="42.66105449463086" />
+      <entry key="M10" value="70.4723403926505" />
+      <entry key="M15" value="87.36492748644864" />
+      <entry key="M30" value="121.07426083353099" />
+      <entry key="H1" value="158.02922913330332" />
+      <entry key="H2" value="189.41143987678208" />
+      <entry key="H4" value="210.87213554992147" />
+      <entry key="D1" value="233.00441250527277" />
+      <entry key="W1" value="237.27346808325692" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="3.5628667970451896E-69" />
-      <entry key="MS500" value="2.0434307157988312E-14" />
-      <entry key="S2" value="3.7845625021629424E-4" />
-      <entry key="S5" value="0.04549576115040768" />
-      <entry key="S10" value="0.26747868033362554" />
-      <entry key="S30" value="1.2721293949700874" />
-      <entry key="S60" value="2.1569738257883793" />
-      <entry key="M2" value="2.9022181459794854" />
-      <entry key="M5" value="3.5117183707901747" />
-      <entry key="M10" value="3.8500341821974193" />
-      <entry key="M15" value="4.150159259714791" />
-      <entry key="M30" value="4.925820374182575" />
-      <entry key="H1" value="5.849868872334407" />
-      <entry key="H2" value="6.668789872517632" />
-      <entry key="H4" value="7.247570527683973" />
-      <entry key="D1" value="7.859784423347026" />
-      <entry key="W1" value="7.979563112398895" />
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="5.927635081140175E-91" />
+      <entry key="S2" value="2.774727669166225E-23" />
+      <entry key="S5" value="9.490479293463844E-10" />
+      <entry key="S10" value="3.0806621517887757E-5" />
+      <entry key="S30" value="0.03134874208875495" />
+      <entry key="S60" value="0.17825169748875433" />
+      <entry key="M2" value="0.4891481723711642" />
+      <entry key="M5" value="1.4914313185978525" />
+      <entry key="M10" value="2.660273216888438" />
+      <entry key="M15" value="3.408760451397897" />
+      <entry key="M30" value="4.78059050823487" />
+      <entry key="H1" value="6.134340553245151" />
+      <entry key="H2" value="7.2506016003884435" />
+      <entry key="H4" value="8.017497777062758" />
+      <entry key="D1" value="8.817771326938882" />
+      <entry key="W1" value="8.973459089369747" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="1.2462226758378839E-52" />
-      <entry key="MS500" value="6.02258618839444E-11" />
-      <entry key="S2" value="0.004855968636734987" />
-      <entry key="S5" value="0.2478230007964763" />
-      <entry key="S10" value="1.2834246497367543" />
-      <entry key="S30" value="6.2938868226638585" />
-      <entry key="S60" value="11.099702545570597" />
-      <entry key="M2" value="15.822091227031459" />
-      <entry key="M5" value="20.82863918268012" />
-      <entry key="M10" value="25.677618378761647" />
-      <entry key="M15" value="32.60918954619286" />
-      <entry key="M30" value="55.186975797863376" />
-      <entry key="H1" value="84.45307028201866" />
-      <entry key="H2" value="110.09381784445175" />
-      <entry key="H4" value="127.71982774025214" />
-      <entry key="D1" value="145.8996628972021" />
-      <entry key="W1" value="149.40376916324652" />
+      <entry key="MS100" value="0.001439716032510841" />
+      <entry key="MS500" value="0.2701813505101901" />
+      <entry key="S2" value="0.7221028091845069" />
+      <entry key="S5" value="0.9804140632173493" />
+      <entry key="S10" value="1.468058556233381" />
+      <entry key="S30" value="3.0011644544792584" />
+      <entry key="S60" value="5.228925280765091" />
+      <entry key="M2" value="13.877766060474498" />
+      <entry key="M5" value="44.11323093085389" />
+      <entry key="M10" value="73.09885666341083" />
+      <entry key="M15" value="90.74399091443561" />
+      <entry key="M30" value="125.83215997514468" />
+      <entry key="H1" value="164.14815999342903" />
+      <entry key="H2" value="196.6527693577293" />
+      <entry key="H4" value="218.88449916501406" />
+      <entry key="D1" value="241.82124714418643" />
+      <entry key="W1" value="246.24679119778182" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -132,7 +130,7 @@
     "Spring Boot.CookiesApplication.executor": "Run",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "backend/dev",
+    "git-widget-placeholder": "Merging backend/dev",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
@@ -162,7 +160,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1783357020160</updated>
-      <workItem from="1783421839767" duration="5298000" />
+      <workItem from="1783421839767" duration="6035000" />
     </task>
     <servers />
   </component>

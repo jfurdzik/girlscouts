@@ -29,6 +29,8 @@ public class School {
 
     private String contactEmail;
 
+    private String contactName;
+
     private String contactPhone;
 
     @Column(length = 2000)
