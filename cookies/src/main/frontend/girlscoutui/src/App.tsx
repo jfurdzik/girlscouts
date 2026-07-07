@@ -8,6 +8,7 @@ import { CalendarView } from './features/calendar/CalendarView';
 import { EventDetail } from './features/events/EventDetail';
 import { getEvents } from './lib/api';
 import type { GirlScoutEvent } from './types';
+import { ManagerDash } from './features/manager-dash/ManagerDash';
 
 type View = 'calendar' | 'leads' | 'manager';
 
@@ -67,12 +68,14 @@ function App() {
       {/* VIEW 3: MANAGER DASHBOARD (Placeholder) */}
       {currentView === 'manager' && (
         <div>
-          <PageHeader title="Manager Control Panel" subtitle="Manage schools, volunteers, and notifications" />
+          {/* <PageHeader title="Manager Control Panel" subtitle="Manage schools, volunteers, and notifications" />
           <div className="px-4">
             <Card className="text-center py-10">
               <p className="text-gray-500 text-sm">Input screens for schools, volunteers, and notifications will display here.</p>
             </Card>
-          </div>
+          </div> */}
+
+          <ManagerDash></ManagerDash>
         </div>
       )}
     </Layout>
