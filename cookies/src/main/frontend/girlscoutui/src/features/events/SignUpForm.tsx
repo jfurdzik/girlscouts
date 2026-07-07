@@ -6,9 +6,10 @@ interface SignUpFormProps {
   onSubmit: (volunteer: { name: string; email: string }) => void;
   onCancel: () => void;
   submitting?: boolean;
+  error?: string | null;
 }
 
-export function SignUpForm({ onSubmit, onCancel, submitting }: SignUpFormProps) {
+export function SignUpForm({ onSubmit, onCancel, submitting, error }: SignUpFormProps) {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
 
@@ -57,6 +58,7 @@ export function SignUpForm({ onSubmit, onCancel, submitting }: SignUpFormProps) 
               {submitting ? 'Signing up...' : 'Confirm Sign Up'}
             </Button>
           </div>
+          {error && <p className="text-red-600 text-xs text-center">{error}</p>}
         </form>
       </div>
     </div>

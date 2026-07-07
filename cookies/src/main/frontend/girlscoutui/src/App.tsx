@@ -2,17 +2,18 @@
 import { useEffect, useState } from 'react';
 import { Layout } from './components/Layout';
 import PageHeader from './components/PageHeader';
-import Card from './components/Card';
 import QRCodeCard from './components/QRCodeCard';
 import { CalendarView } from './features/calendar/CalendarView';
 import { EventDetail } from './features/events/EventDetail';
 import { getEvents } from './lib/api';
 import type { GirlScoutEvent } from './types';
 
-type View = 'calendar' | 'leads' | 'manager';
+// Manager functionality lives entirely in the separate manager.html bundle
+// (see src/manager/) — the public site only ever knows about these two views.
+type View = 'calendar' | 'leads';
 
 function App() {
-  const [currentView, setView] = useState<View>('calendar');
+  const [currentView, setCurrentView] = useState<View>('calendar');
   const [selectedEventId, setSelectedEventId] = useState<string | null>(null);
   const [events, setEvents] = useState<GirlScoutEvent[]>([]);
   const [loading, setLoading] = useState(true);
@@ -36,7 +37,7 @@ function App() {
     <Layout
       currentView={currentView}
       setView={view => {
-        setView(view as View);
+        setCurrentView(view as View);
         setSelectedEventId(null);
       }}
     >
@@ -54,24 +55,12 @@ function App() {
           <CalendarView events={events} onSelectEvent={id => setSelectedEventId(id)} />
         ))}
 
-      {/* VIEW 2: QR LEAD CARD FEATURE (Placeholder) */}
+      {/* VIEW 2: QR LEAD CARD FEATURE */}
       {currentView === 'leads' && (
         <div>
           <PageHeader title="Lead Card Form" />
           <div className="px-4">
             <QRCodeCard></QRCodeCard>
-          </div>
-        </div>
-      )}
-
-      {/* VIEW 3: MANAGER DASHBOARD (Placeholder) */}
-      {currentView === 'manager' && (
-        <div>
-          <PageHeader title="Manager Control Panel" subtitle="Manage schools, volunteers, and notifications" />
-          <div className="px-4">
-            <Card className="text-center py-10">
-              <p className="text-gray-500 text-sm">Input screens for schools, volunteers, and notifications will display here.</p>
-            </Card>
           </div>
         </div>
       )}

@@ -1,11 +1,12 @@
 package com.girlscouts.cookies.assignments;
 
+import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("/assignments")
+@RequestMapping("/api/assignments")
 public class AssignmentController {
 
     private final AssignmentService assignmentService;
@@ -22,18 +23,18 @@ public class AssignmentController {
     @GetMapping("/{assignmentId}")
     public Assignment getAssignmentById(@PathVariable Long assignmentId) {
         return assignmentService.getAssignmentById(assignmentId)
-                .orElseThrow(() -> new RuntimeException("Assignment not found"));
+                .orElseThrow(() -> new com.girlscouts.cookies.exceptions.EntityNotFoundException("Assignment not found"));
     }
 
     @PostMapping
-    public Assignment createAssignment(@RequestBody Assignment assignment) {
+    public Assignment createAssignment(@Valid @RequestBody Assignment assignment) {
         return assignmentService.createAssignment(assignment);
     }
 
     @PutMapping("/{assignmentId}")
     public Assignment updateAssignment(
             @PathVariable Long assignmentId,
-            @RequestBody Assignment assignment) {
+            @Valid @RequestBody Assignment assignment) {
 
         return assignmentService.updateAssignment(assignmentId, assignment);
     }

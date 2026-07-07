@@ -1,5 +1,7 @@
 package com.girlscouts.cookies.users;
 
+import com.girlscouts.cookies.exceptions.EntityNotFoundException;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import java.util.List;
 
@@ -7,9 +9,11 @@ import java.util.List;
 public class UsersService {
 
     private final UsersRepository usersRepository;
+    private final PasswordEncoder passwordEncoder;
 
-    public UsersService(UsersRepository usersRepository) {
+    public UsersService(UsersRepository usersRepository, PasswordEncoder passwordEncoder) {
         this.usersRepository = usersRepository;
+        this.passwordEncoder = passwordEncoder;
     }
 
     public List<Users> getAllUsers() {
@@ -17,10 +21,13 @@ public class UsersService {
     }
 
     public Users getUserById(Long id) {
-        return usersRepository.findById(id).orElseThrow(() -> new RuntimeException("User not found"));
+        return usersRepository.findById(id).orElseThrow(() -> new com.girlscouts.cookies.exceptions.EntityNotFoundException("User not found"));
     }
 
     public Users createUser(Users user) {
+        if (user.getPassword() != null && !user.getPassword().isBlank()) {
+            user.setPassword(passwordEncoder.encode(user.getPassword()));
+        }
         return usersRepository.save(user);
     }
 
@@ -32,6 +39,12 @@ public class UsersService {
         user.setLastName(updatedUser.getLastName());
         user.setRole(updatedUser.getRole());
         user.setServiceUnit(updatedUser.getServiceUnit());
+        user.setUsername(updatedUser.getUsername());
+        user.setEmail(updatedUser.getEmail());
+        // Only touch the password if a new one was actually provided.
+        if (updatedUser.getPassword() != null && !updatedUser.getPassword().isBlank()) {
+            user.setPassword(passwordEncoder.encode(updatedUser.getPassword()));
+        }
         return usersRepository.save(user);
     }
 

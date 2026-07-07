@@ -29,7 +29,7 @@ public class ReportsService {
     public Reports updateReport(Long reportId, Reports updatedReport) {
 
         Reports report = reportsRepository.findById(reportId)
-                .orElseThrow(() -> new RuntimeException("Report not found"));
+                .orElseThrow(() -> new com.girlscouts.cookies.exceptions.EntityNotFoundException("Report not found"));
 
         report.setEventId(updatedReport.getEventId());
         report.setUserId(updatedReport.getUserId());

@@ -13,4 +13,8 @@ public interface UsersRepository extends JpaRepository<Users, Long>{
 
     List<Users>findByServiceUnit(String serviceUnit);
 
+    Optional<Users> findByUsername(String username);
+
+    Optional<Users> findByEmail(String email);
+
 }

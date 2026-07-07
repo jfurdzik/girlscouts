@@ -20,7 +20,7 @@ public class SchoolService {
     public School getSchoolById(Long id) {
         return schoolRepository.findById(id)
                 .orElseThrow(() ->
-                        new RuntimeException("School not found"));
+                        new com.girlscouts.cookies.exceptions.EntityNotFoundException("School not found"));
     }
 
     public School createSchool(School school) {

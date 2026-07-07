@@ -14,8 +14,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/availability")
-@CrossOrigin(origins = "*")
+@RequestMapping("/api/availability")
 public class AvailabilityController {
 
     private final EventRepository eventRepository;

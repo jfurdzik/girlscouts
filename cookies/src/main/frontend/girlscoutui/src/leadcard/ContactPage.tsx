@@ -1,10 +1,10 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { CheckCircle2 } from 'lucide-react';
 
 import Card from '../components/Card';
 import Button from '../components/Button';
 import PageHeader from '../components/PageHeader';
-import { getVolunteer, type VolunteerContact, submitLead } from '../lib/api';
+import { submitLead } from '../lib/api';
 
 export default function ContactPage() {
     const volunteerId =
@@ -37,7 +37,7 @@ export default function ContactPage() {
 
         setLoading(true);
 
-        const result = await submitLead(form);
+        const result = await submitLead(form, volunteerId || undefined);
 
         setLoading(false);
 

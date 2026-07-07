@@ -1,12 +1,12 @@
 package com.girlscouts.cookies.schools;
 
+import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("/schools")
-@CrossOrigin(origins = "*")
+@RequestMapping("/api/schools")
 public class SchoolController {
 
     private final SchoolService schoolService;
@@ -26,14 +26,14 @@ public class SchoolController {
     }
 
     @PostMapping
-    public School createSchool(@RequestBody School school) {
+    public School createSchool(@Valid @RequestBody School school) {
         return schoolService.createSchool(school);
     }
 
     @PutMapping("/{id}")
     public School updateSchool(
             @PathVariable Long id,
-            @RequestBody School school) {
+            @Valid @RequestBody School school) {
         return schoolService.updateSchool(id, school);
     }
 

@@ -1,6 +1,6 @@
 // src/components/Layout.tsx
 import type { ReactNode } from 'react';
-import { CalendarDays, QrCode, Briefcase, Bell } from 'lucide-react';
+import { CalendarDays, QrCode, Bell, ShieldCheck } from 'lucide-react';
 
 interface LayoutProps {
   children: ReactNode;
@@ -8,10 +8,12 @@ interface LayoutProps {
   setView: (view: string) => void;
 }
 
+// Manager functionality intentionally does NOT live here — the public site
+// must never expose it. Managers use the separate manager.html portal
+// (linked subtly below), which has its own login gate and its own bundle.
 const NAV_ITEMS = [
   { id: 'calendar', label: 'Calendar', icon: CalendarDays },
   { id: 'leads', label: 'QR Lead', icon: QrCode },
-  { id: 'manager', label: 'Manager', icon: Briefcase },
 ];
 
 export function Layout({ children, currentView, setView }: LayoutProps) {
@@ -24,8 +26,8 @@ export function Layout({ children, currentView, setView }: LayoutProps) {
             ⚜
           </div>
           <div>
-            <div className="font-semibold text-sm leading-none">GS Cookie Tracker</div>
-            <div className="text-green-100/90 text-xs mt-0.5">Cookie booth &amp; event hub</div>
+            <div className="font-semibold text-sm leading-none">GS Recruitment Event Tracker</div>
+            <div className="text-green-100/90 text-xs mt-0.5">Open House &amp; event hub</div>
           </div>
         </div>
         <button
@@ -59,6 +61,15 @@ export function Layout({ children, currentView, setView }: LayoutProps) {
               </button>
             );
           })}
+          {/* Just a link to the separate manager.html entry/bundle — no manager
+              functionality or data is ever loaded into the public site itself. */}
+          <a
+            href="/manager.html"
+            className="flex flex-col items-center gap-0.5 py-2 px-4 rounded-xl text-gray-300 hover:text-gray-500 transition-colors min-w-[64px]"
+          >
+            <ShieldCheck size={22} />
+            <span className="text-xs">Staff</span>
+          </a>
         </div>
       </nav>
     </div>

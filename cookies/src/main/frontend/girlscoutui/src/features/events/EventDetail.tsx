@@ -15,18 +15,22 @@ export function EventDetail({ event, onBack, onSignUpSuccess }: EventDetailProps
   const [isSignedUp, setIsSignedUp] = useState(false);
   const [showForm, setShowForm] = useState(false);
   const [submitting, setSubmitting] = useState(false);
+  const [signupError, setSignupError] = useState<string | null>(null);
 
   const slotsTotal = event.slotsTotal ?? event.slotsAvailable;
   const full = event.slotsAvailable <= 0;
 
   async function handleConfirmSignUp(volunteer: { name: string; email: string }) {
     setSubmitting(true);
+    setSignupError(null);
     const result = await signUpForEvent(event.id, volunteer);
     setSubmitting(false);
-    setShowForm(false);
     if (result.success) {
+      setShowForm(false);
       setIsSignedUp(true);
       onSignUpSuccess(event.id);
+    } else {
+      setSignupError(result.message ?? 'Something went wrong. Please try again.');
     }
   }
 
@@ -160,6 +164,7 @@ export function EventDetail({ event, onBack, onSignUpSuccess }: EventDetailProps
       {showForm && (
         <SignUpForm
           submitting={submitting}
+          error={signupError}
           onCancel={() => setShowForm(false)}
           onSubmit={handleConfirmSignUp}
         />

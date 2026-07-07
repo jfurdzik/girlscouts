@@ -5,13 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8a4391a5-0cbe-440b-ae93-d6f6e923563a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/cookies/src/main/frontend/girlscoutui/src/components/QRCodeCard.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cookies/src/main/frontend/girlscoutui/src/features/manager/EventEditor" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cookies/src/main/frontend/girlscoutui/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/cookies/src/main/frontend/girlscoutui/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cookies/src/main/frontend/girlscoutui/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cookies/src/main/frontend/girlscoutui/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cookies/src/main/frontend/girlscoutui/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/cookies/src/main/frontend/girlscoutui/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cookies/src/main/frontend/girlscoutui/src/leadcard/ContactPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/cookies/src/main/frontend/girlscoutui/src/leadcard/ContactPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cookies/src/main/frontend/girlscoutui/src/lib/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cookies/src/main/frontend/girlscoutui/src/lib/api.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cookies/src/main/frontend/girlscoutui/src/components/Layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/cookies/src/main/frontend/girlscoutui/src/components/Layout.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,18 +17,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "mrd3835"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;mrd3835&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/jfurdzik/girlscouts.git",
-    "accountId": "85608529-b5f7-471a-8dec-16f6bcc2cfec"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/jfurdzik/girlscouts.git&quot;,
+    &quot;accountId&quot;: &quot;85608529-b5f7-471a-8dec-16f6bcc2cfec&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8,
   &quot;fromUser&quot;: false
@@ -42,20 +38,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/molly/personal Projects/girlscout_final/girlscouts"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/molly/personal Projects/girlscout_final/girlscouts&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
