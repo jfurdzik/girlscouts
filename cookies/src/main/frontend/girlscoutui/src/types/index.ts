@@ -21,8 +21,6 @@ export interface GirlScoutEvent {
   description: string;
   contacts: Contact[]; // Staff/Volunteers managing it
   attendees: Contact[]; // People who already signed up
-  slotsAvailable: number;
-  slotsTotal?: number;
   status?: EventStatus;
 }
 
