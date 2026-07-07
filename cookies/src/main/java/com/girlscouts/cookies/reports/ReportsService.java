@@ -8,9 +8,9 @@ import java.util.Optional;
 @Service
 public class ReportsService {
 
-    private final ReportsRepository reportsRepository;
+    private final ReportRepository reportsRepository;
 
-    public ReportsService(ReportsRepository reportsRepository) {
+    public ReportsService(ReportRepository reportsRepository) {
         this.reportsRepository = reportsRepository;
     }
 

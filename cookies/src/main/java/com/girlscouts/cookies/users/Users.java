@@ -29,7 +29,7 @@ public class Users {
             String serviceUnit,
             Role role) {
         this.firstName = firstName;
-        this.lastname = lastName;
+        this.lastName = lastName;
         this.serviceUnit = serviceUnit;
         this.role = role;
     }
