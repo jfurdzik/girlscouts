@@ -24,7 +24,7 @@ export default function VolunteerDashboard() {
 
   return (
     <div>
-      <PageHeader title="Volunteers" subtitle="Coverage and sign-ups for every event" />
+      <PageHeader title="Volunteers" subtitle="Who's signed up for every event" />
       {error && <Card className="mb-4 text-sm text-red-600">{error}</Card>}
 
       <div className="space-y-3">
@@ -32,14 +32,13 @@ export default function VolunteerDashboard() {
           const eventAssignments = assignments.filter(
             a => a.eventId === event.eventId && a.status?.toUpperCase() !== 'CANCELLED'
           );
-          const capacity = event.capacity ?? eventAssignments.length;
 
           return (
             <Card key={event.eventId}>
               <div className="flex items-center justify-between mb-2">
                 <h3 className="font-semibold text-gray-900">{event.eventName}</h3>
                 <span className="text-sm font-medium text-brand-dark">
-                  {eventAssignments.length} / {capacity} Volunteers
+                  {eventAssignments.length} Volunteer{eventAssignments.length === 1 ? '' : 's'}
                 </span>
               </div>
               <p className="text-xs text-gray-400 mb-3">{event.eventDate} · {event.location}</p>

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { CalendarDays, DoorOpen, Users, Contact, TrendingUp, Gauge } from 'lucide-react';
+import { CalendarDays, DoorOpen, Users, Contact, TrendingUp, ClipboardCheck } from 'lucide-react';
 import PageHeader from '../../components/PageHeader';
 import Card from '../../components/Card';
 import { getDashboardMetrics } from '../../lib/api';
@@ -11,7 +11,7 @@ const TILES: { key: keyof DashboardMetrics; label: string; icon: typeof Calendar
   { key: 'totalVolunteers', label: 'Volunteers', icon: Users },
   { key: 'totalLeads', label: 'Total Leads', icon: Contact },
   { key: 'leadsThisMonth', label: 'Leads This Month', icon: TrendingUp },
-  { key: 'averageCoveragePercent', label: 'Avg. Coverage', icon: Gauge, suffix: '%' },
+  { key: 'totalSignups', label: 'Total Signups', icon: ClipboardCheck },
 ];
 
 export default function DashboardHome() {

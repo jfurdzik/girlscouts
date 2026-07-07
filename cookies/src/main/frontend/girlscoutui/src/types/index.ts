@@ -41,7 +41,6 @@ export interface BackendEvent {
   description: string;
   schoolId: number | null;
   location: string | null;
-  capacity: number | null;
   status: BackendEventStatus;
   followUpInfo: string | null;
 }
@@ -95,7 +94,7 @@ export interface NotificationSettingsDTO {
   boostEmailsEnabled: boolean;
   lowCoverageReminderEnabled: boolean;
   reminderDaysBefore: number;
-  reminderThresholdPercent: number;
+  reminderMinVolunteers: number;
   signupEmailSubject: string;
   signupEmailBody: string;
   boostEmailSubject: string;
@@ -110,5 +109,5 @@ export interface DashboardMetrics {
   totalVolunteers: number;
   totalLeads: number;
   leadsThisMonth: number;
-  averageCoveragePercent: number;
+  totalSignups: number;
 }

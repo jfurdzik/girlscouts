@@ -22,7 +22,6 @@ const emptyForm: Partial<BackendEvent> = {
   endTime: '12:00',
   description: '',
   location: '',
-  capacity: 4,
   status: 'OPEN',
 };
 
@@ -114,7 +113,7 @@ export default function EventEditor() {
                       {event.eventDate} · {event.startTime}–{event.endTime} · {event.location || 'No location set'}
                     </p>
                     <p className="text-xs text-gray-400 mt-1">
-                      {count}/{event.capacity ?? '∞'} volunteers
+                      {count} volunteer{count === 1 ? '' : 's'} signed up
                     </p>
                   </div>
                   <div className="flex gap-1.5 shrink-0">
@@ -191,10 +190,7 @@ function EventFormModal({
           <LabeledInput label="Event Name" value={value.eventName ?? ''} onChange={v => field('eventName', v)} required />
           <LabeledInput label="Description" value={value.description ?? ''} onChange={v => field('description', v)} />
           <LabeledInput label="Location" value={value.location ?? ''} onChange={v => field('location', v)} />
-          <div className="grid grid-cols-2 gap-3">
-            <LabeledInput label="Date" type="date" value={value.eventDate ?? ''} onChange={v => field('eventDate', v)} required />
-            <LabeledInput label="Capacity" type="number" value={String(value.capacity ?? '')} onChange={v => field('capacity', Number(v))} />
-          </div>
+          <LabeledInput label="Date" type="date" value={value.eventDate ?? ''} onChange={v => field('eventDate', v)} required />
           <div className="grid grid-cols-2 gap-3">
             <LabeledInput label="Start Time" type="time" value={value.startTime ?? ''} onChange={v => field('startTime', v)} required />
             <LabeledInput label="End Time" type="time" value={value.endTime ?? ''} onChange={v => field('endTime', v)} required />

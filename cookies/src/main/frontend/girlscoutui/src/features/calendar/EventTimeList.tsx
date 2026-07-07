@@ -1,4 +1,4 @@
-import { Clock, MapPin, ChevronRight } from 'lucide-react';
+import { Clock, MapPin, ChevronRight, Users } from 'lucide-react';
 import type { GirlScoutEvent } from '../../types';
 import Badge from '../../components/Badge';
 
@@ -21,7 +21,8 @@ export function EventTimeList({ events, onSelectEvent, emptyLabel }: EventTimeLi
   return (
     <div className="space-y-3">
       {events.map(event => {
-        const full = event.slotsAvailable <= 0;
+        const cancelled = event.status === 'cancelled';
+        const full = event.status === 'full';
         return (
           <div
             key={event.id}
@@ -32,8 +33,8 @@ export function EventTimeList({ events, onSelectEvent, emptyLabel }: EventTimeLi
               <div className="flex-1 min-w-0">
                 <div className="flex flex-wrap items-center gap-1.5 mb-1.5">
                   <Badge color="gray">{event.serviceUnit}</Badge>
-                  {full && <Badge color="gray">Full</Badge>}
-                  {!full && event.slotsAvailable <= 1 && <Badge color="amber">Almost full</Badge>}
+                  {full && <Badge color="amber">Full</Badge>}
+                  {cancelled && <Badge color="red">Cancelled</Badge>}
                 </div>
                 <h3 className="text-gray-900 font-semibold leading-snug truncate">{event.title}</h3>
                 <p className="text-gray-400 text-xs mt-0.5 truncate">{event.location}</p>
@@ -54,23 +55,10 @@ export function EventTimeList({ events, onSelectEvent, emptyLabel }: EventTimeLi
             </div>
 
             <div className="flex items-center justify-between">
-              {!full ? (
-                <div className="flex items-center gap-1">
-                  {Array.from({ length: event.slotsTotal ?? event.slotsAvailable }).map((_, i) => (
-                    <div
-                      key={i}
-                      className={`w-2.5 h-2.5 rounded-full ${
-                        i < (event.slotsTotal ?? event.slotsAvailable) - event.slotsAvailable
-                          ? 'bg-brand'
-                          : 'bg-gray-200'
-                      }`}
-                    />
-                  ))}
-                  <span className="text-xs text-gray-500 ml-1.5">{event.slotsAvailable} left</span>
-                </div>
-              ) : (
-                <span className="text-xs text-gray-400 bg-gray-100 px-2 py-1 rounded-full">Full</span>
-              )}
+              <span className="flex items-center gap-1.5 text-xs text-gray-500">
+                <Users size={13} />
+                {event.attendees.length} volunteer{event.attendees.length === 1 ? '' : 's'}
+              </span>
               <span className="text-brand text-xs font-semibold flex items-center gap-0.5">
                 View details <ChevronRight size={13} />
               </span>

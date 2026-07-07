@@ -85,17 +85,14 @@ export default function NotificationSettingsPage() {
               </select>
             </div>
             <div>
-              <label className="text-xs font-medium text-gray-500 mb-1 block">If coverage below</label>
-              <select
-                value={settings.reminderThresholdPercent}
-                onChange={e => field('reminderThresholdPercent', Number(e.target.value))}
+              <label className="text-xs font-medium text-gray-500 mb-1 block">If fewer than this many volunteers</label>
+              <input
+                type="number"
+                min={0}
+                value={settings.reminderMinVolunteers}
+                onChange={e => field('reminderMinVolunteers', Number(e.target.value))}
                 className="w-full px-3 py-2 bg-gray-100 rounded-xl text-sm"
-              >
-                <option value={25}>25%</option>
-                <option value={50}>50%</option>
-                <option value={60}>60%</option>
-                <option value={75}>75%</option>
-              </select>
+              />
             </div>
           </div>
         </Card>
