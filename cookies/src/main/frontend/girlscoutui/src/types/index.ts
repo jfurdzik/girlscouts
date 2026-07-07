@@ -1,5 +1,7 @@
 // src/types/index.ts
 
+export type EventStatus = 'open' | 'full' | 'cancelled';
+
 export interface Contact {
   id: string;
   name: string;
@@ -17,7 +19,9 @@ export interface GirlScoutEvent {
   zipCode: string;
   serviceUnit: string;
   description: string;
-  contacts: Contact[];       // Staff/Volunteers managing it
-  attendees: Contact[];      // People who already signed up
+  contacts: Contact[]; // Staff/Volunteers managing it
+  attendees: Contact[]; // People who already signed up
   slotsAvailable: number;
+  slotsTotal?: number;
+  status?: EventStatus;
 }

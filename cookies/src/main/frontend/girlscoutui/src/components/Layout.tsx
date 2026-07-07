@@ -1,61 +1,66 @@
 // src/components/Layout.tsx
-import React from 'react';
+import type { ReactNode } from 'react';
+import { CalendarDays, QrCode, Briefcase, Bell } from 'lucide-react';
 
 interface LayoutProps {
-  children: React.ReactNode;
+  children: ReactNode;
   currentView: string;
   setView: (view: string) => void;
 }
 
-export const Layout: React.FC<LayoutProps> = ({ children, currentView, setView }) => {
-  return (
-    <div className="flex flex-col min-h-screen bg-gray-50 max-w-md mx-auto shadow-xl border-x border-gray-200">
+const NAV_ITEMS = [
+  { id: 'calendar', label: 'Calendar', icon: CalendarDays },
+  { id: 'leads', label: 'QR Lead', icon: QrCode },
+  { id: 'manager', label: 'Manager', icon: Briefcase },
+];
 
-      {/* Global Header / Notification Bar */}
-      <header className="sticky top-0 bg-green-700 text-white p-4 flex justify-between items-center z-10 shadow-md">
-        <div className="flex items-center gap-2">
-          <span className="text-xl">⚜️</span>
-          <h1 className="font-bold tracking-wide text-lg">G.S. Cookie Tracker</h1>
+export function Layout({ children, currentView, setView }: LayoutProps) {
+  return (
+    <div className="flex flex-col h-screen max-w-md mx-auto bg-[#f4f7f4] border-x border-gray-200 overflow-hidden">
+      {/* Top Header */}
+      <header className="shrink-0 bg-brand text-white px-4 py-3 flex items-center justify-between shadow-sm z-10">
+        <div className="flex items-center gap-2.5">
+          <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center text-base">
+            ⚜
+          </div>
+          <div>
+            <div className="font-semibold text-sm leading-none">GS Cookie Tracker</div>
+            <div className="text-green-100/90 text-xs mt-0.5">Cookie booth &amp; event hub</div>
+          </div>
         </div>
-        {/* Simple Notification Dot Icon */}
-        <button className="relative p-1 hover:bg-green-800 rounded-full transition" onClick={() => alert("No new notifications")}>
-          🔔
-          <span className="absolute top-0 right-0 block h-2.5 w-2.5 rounded-full bg-red-500 ring-2 ring-green-700" />
+        <button
+          className="relative p-1.5 rounded-full hover:bg-white/10 transition-colors"
+          onClick={() => alert('No new notifications')}
+          aria-label="Notifications"
+        >
+          <Bell size={20} />
+          <span className="absolute top-0.5 right-0.5 block h-2 w-2 rounded-full bg-accent ring-2 ring-brand" />
         </button>
       </header>
 
-      {/* Dynamic Content Area (Your pages render here) */}
-      <main className="flex-1 pb-24 overflow-y-auto">
-        {children}
-      </main>
+      {/* Content */}
+      <main className="flex-1 overflow-y-auto">{children}</main>
 
-      {/* Mobile-Friendly Bottom Navigation Bar */}
-      <nav className="fixed bottom-0 left-0 right-0 max-w-md mx-auto bg-white border-t border-gray-200 flex justify-around py-3 z-10 shadow-[0_-4px_10px_rgba(0,0,0,0.05)]">
-        <button
-          onClick={() => setView('calendar')}
-          className={`flex flex-col items-center gap-1 text-xs ${currentView === 'calendar' ? 'text-green-700 font-bold' : 'text-gray-500'}`}
-        >
-          <span className="text-lg">📅</span>
-          Calendar
-        </button>
-
-        <button
-          onClick={() => setView('leads')}
-          className={`flex flex-col items-center gap-1 text-xs ${currentView === 'leads' ? 'text-green-700 font-bold' : 'text-gray-500'}`}
-        >
-          <span className="text-lg">🔲</span>
-          QR Lead
-        </button>
-
-        <button
-          onClick={() => setView('manager')}
-          className={`flex flex-col items-center gap-1 text-xs ${currentView === 'manager' ? 'text-green-700 font-bold' : 'text-gray-500'}`}
-        >
-          <span className="text-lg">💼</span>
-          Manager
-        </button>
+      {/* Bottom Nav */}
+      <nav className="shrink-0 bg-white border-t border-gray-200 px-2 py-1 shadow-[0_-4px_10px_rgba(0,0,0,0.04)]">
+        <div className="flex justify-around items-center">
+          {NAV_ITEMS.map(({ id, label, icon: Icon }) => {
+            const active = currentView === id;
+            return (
+              <button
+                key={id}
+                onClick={() => setView(id)}
+                className={`flex flex-col items-center gap-0.5 py-2 px-4 rounded-xl transition-colors min-w-[64px] ${
+                  active ? 'text-brand' : 'text-gray-400 hover:text-gray-600'
+                }`}
+              >
+                <Icon size={22} strokeWidth={active ? 2.4 : 2} />
+                <span className={`text-xs ${active ? 'font-semibold' : ''}`}>{label}</span>
+              </button>
+            );
+          })}
+        </div>
       </nav>
-
     </div>
   );
-};
+}
