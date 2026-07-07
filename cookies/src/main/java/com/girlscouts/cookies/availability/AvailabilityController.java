@@ -4,12 +4,14 @@ import com.girlscouts.cookies.assignments.Assignment;
 import com.girlscouts.cookies.assignments.AssignmentRepository;
 import com.girlscouts.cookies.events.Event;
 import com.girlscouts.cookies.events.EventRepository;
+import com.girlscouts.cookies.exceptions.EntityNotFoundException;
 import com.girlscouts.cookies.reports.Reports;
 import com.girlscouts.cookies.reports.ReportRepository;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/availability")
@@ -60,25 +62,26 @@ public class AvailabilityController {
     public EventDetailsDTO getEventInfo(
             @PathVariable Long id) {
 
-//        Event event = eventRepository.findBySchoolId(id) //
-//                .orElseThrow(() ->
-//                        new RuntimeException("Event not found"));
+        Event event = eventRepository.findBySchoolId(id)
+                .orElseThrow(() ->
+                        new EntityNotFoundException("Event not found"));
+
 
         List<Assignment> assignments =
-                assignmentRepository.findByEventId(id);  //good
+                assignmentRepository.findByEventId(id);
 
         List<Reports> reports =
-                reportRepository.findByEventId(id); //good
+                reportRepository.findByEventId(id);
 
-//        int totalLeadCards = reports.stream()
-//                .mapToInt(Reports::getLeadCardsDistributed)
-//                .sum();
+        int totalLeadCards = reports.stream()
+                .mapToInt(Reports::getLeadCards)
+                .sum();
 
-//        return new EventDetailsDTO(
-//                event,
-//                assignments,
-//                totalLeadCards
-//        );
-        return null;
+        return new EventDetailsDTO(
+                event,
+                assignments,
+                totalLeadCards
+        );
+        //return null;
     }
 }

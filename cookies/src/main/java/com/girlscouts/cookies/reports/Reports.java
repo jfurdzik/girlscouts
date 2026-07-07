@@ -45,7 +45,9 @@ public class Reports {
 
     public void setLeadCards(Integer leadCards) {
         this.leadCards = leadCards;
-    }
+    } //change lead cards to be an object??
+
+    //lead card fields: email, name, school
 
     public void setNotes(String notes) {
         this.notes = notes;

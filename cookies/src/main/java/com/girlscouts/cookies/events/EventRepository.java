@@ -5,13 +5,14 @@ import org.springframework.stereotype.Repository;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Optional;
 
 @Repository
 public interface EventRepository extends JpaRepository<Event, Long> {
 
     List<Event> findByEventDate(LocalDate eventDate);
 
-    List<Event> findBySchoolId(Long schoolId);
+    Optional<Event> findBySchoolId(Long schoolId);
 
     List<Event> findByEventNameContainingIgnoreCase(String eventName);
 
