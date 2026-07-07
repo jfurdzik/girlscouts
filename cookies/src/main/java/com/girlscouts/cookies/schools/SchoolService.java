@@ -36,7 +36,6 @@ public class SchoolService {
         school.setZipCode(updatedSchool.getZipCode());
         school.setSchoolType(updatedSchool.getSchoolType());
         school.setAllowsFlyers(updatedSchool.getAllowsFlyers());
-        //school.setContactName(updatedSchool.getContactName());
         school.setContactEmail(updatedSchool.getContactEmail());
         school.setContactPhone(updatedSchool.getContactPhone());
         school.setNotes(updatedSchool.getNotes());

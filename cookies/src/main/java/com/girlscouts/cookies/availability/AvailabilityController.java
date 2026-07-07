@@ -60,9 +60,9 @@ public class AvailabilityController {
     public EventDetailsDTO getEventInfo(
             @PathVariable Long id) {
 
-//        Event event = eventRepository.findBySchoolId(id) //
-//                .orElseThrow(() ->
-//                        new RuntimeException("Event not found"));
+        Event event = eventRepository.findBySchoolId(id)
+                .orElseThrow(() ->
+                        new RuntimeException("Event not found"));
 
         List<Assignment> assignments =
                 assignmentRepository.findByEventId(id);  //good

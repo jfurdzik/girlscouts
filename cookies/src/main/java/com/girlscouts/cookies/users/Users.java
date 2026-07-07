@@ -20,6 +20,7 @@ public class Users {
     @Enumerated(EnumType.STRING)
     private Role role;
 
+    private int numAssignments;
 
     public Users(){}
 
@@ -32,5 +33,6 @@ public class Users {
         this.lastName = lastName;
         this.serviceUnit = serviceUnit;
         this.role = role;
+        this.numAssignments = 0;
     }
 }
